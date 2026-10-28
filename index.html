@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#230d25">
+  <meta name="description" content="Uma experiência de aniversário feita com carinho: 19 motivos pelos quais eu escolheria você.">
+  <title>19 motivos pelos quais eu escolheria você ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <div class="particle-layer" id="particle-layer" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Voltar ao início">
+      <span class="brand-mark">♡</span>
+      <span>Eu te amo!</span>
+    </a>
+    <button class="music-button" id="music-button" type="button" aria-pressed="false">
+      <span class="music-icon" aria-hidden="true">♫</span>
+      <span id="music-label">Tocar nossa música</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="eyebrow"><span class="eyebrow-line"></span> UMA PEQUENA SURPRESA <span class="eyebrow-line"></span></div>
+      <div class="hero-heart-wrap" aria-hidden="true">
+        <span class="orbit orbit-one"></span>
+        <span class="orbit orbit-two"></span>
+        <span class="hero-heart">♥</span>
+        <span class="spark spark-one">✦</span><span class="spark spark-two">✧</span><span class="spark spark-three">✦</span>
+      </div>
+      <p class="hero-kicker" id="birthday-kicker">Feliz aniversário, meu amor</p>
+      <h1>19 motivos<br><em>pelos quais eu escolheria você</em></h1>
+      <p class="hero-copy">De todas as histórias que a vida poderia escrever,<br class="desktop-break"> a minha favorita é aquela em que encontro você.</p>
+      <button class="primary-button" id="start-button" type="button">
+        Descobrir minhas 19 razões <span aria-hidden="true">→</span>
+      </button>
+      <p class="tiny-note">feito à mão, linha por linha, pensando em você ♡</p>
+      <a class="scroll-cue" href="#memories" aria-label="Rolar até os corações"><span></span></a>
+    </section>
+
+    <section class="memories-section" id="memories" hidden>
+      <div class="section-heading">
+        <p class="eyebrow">UM CORAÇÃO DE CADA VEZ</p>
+        <h2>Pequenas razões,<br><em>um amor inteiro.</em></h2>
+        <p>Cada coração guarda uma coisa que quero que você saiba.</p>
+      </div>
+      <div class="progress-wrap" aria-live="polite">
+        <div class="progress-label"><span id="progress-text">0 de 18 motivos descobertos</span><span id="progress-percent">0%</span></div>
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      </div>
+      <div class="heart-grid" id="heart-grid" aria-label="19 corações interativos"></div>
+      <p class="unlock-hint" id="unlock-hint">Explore os corações. O último guarda uma surpresa especial.</p>
+      <div class="final-lock" id="final-lock" aria-live="polite">
+        <span class="lock-icon" aria-hidden="true">♡</span>
+        <p>O 19º motivo está esperando por você.</p>
+        <small>Descubra os outros 18 para desbloquear a carta final.</small>
+      </div>
+    </section>
+
+    <section class="closing-note" id="closing-note" hidden>
+      <div class="closing-line"></div>
+      <p>Obrigada por chegar até aqui.</p>
+      <h2>Que a sua nova fase seja tão bonita<br><em>quanto a pessoa que você é.</em></h2>
+      <p class="closing-signature">Com todo o meu amor, sempre. ♡</p>
+      <button class="text-button" id="back-to-hearts" type="button">Voltar aos corações ↑</button>
+    </section>
+  </main>
+
+  <footer>
+    <span>feito com carinho, especialmente para você</span>
+    <span class="footer-heart">♥</span>
+  </footer>
+
+  <dialog class="reason-dialog" id="reason-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" id="dialog-close" type="button" aria-label="Fechar mensagem">×</button>
+    <div class="dialog-decoration" aria-hidden="true">♡</div>
+    <p class="dialog-number" id="dialog-number">MOTIVO 01</p>
+    <h2 id="dialog-title">Seu jeito de ser</h2>
+    <p class="dialog-message" id="dialog-message"></p>
+    <figure class="dialog-photo-wrap" id="dialog-photo-wrap" hidden>
+      <img id="dialog-photo" src="" alt="Uma lembrança especial">
+      <figcaption id="dialog-photo-caption"></figcaption>
+    </figure>
+    <button class="secondary-button" id="dialog-done" type="button">Guardar no coração ♡</button>
+  </dialog>
+
+  <dialog class="letter-dialog" id="letter-dialog" aria-labelledby="letter-title">
+    <button class="dialog-close" id="letter-close" type="button" aria-label="Fechar carta">×</button>
+    <div class="letter-top-icon" aria-hidden="true">✧</div>
+    <p class="eyebrow">MOTIVO Nº 19 · A CARTA FINAL</p>
+    <h2 id="letter-title">Se eu pudesse escolher<br><em>mais uma vez...</em></h2>
+    <figure class="letter-photo" id="letter-photo-wrap" hidden>
+      <img id="letter-photo" src="" alt="Fotografia especial do casal">
+    </figure>
+    <div class="letter-copy" id="letter-copy"></div>
+    <p class="letter-signoff" id="letter-signoff">Feliz 19 anos, meu amor. ♡</p>
+    <button class="primary-button letter-button" id="letter-finish" type="button">Guardar esse momento <span aria-hidden="true">♡</span></button>
+  </dialog>
+
+  <audio id="background-music" src="audio/nossa-musica.mp3" preload="none" loop></audio>
+</body>
+</html>
